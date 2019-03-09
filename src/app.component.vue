@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <el-container>
-      <el-aside width="200px" v-if="isLogIn"></el-aside>
+      <el-aside width="228px" v-if="isLogIn">
+        <side-navigation/>
+      </el-aside>
       <el-main>
         <router-view></router-view>
       </el-main>

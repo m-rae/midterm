@@ -75,12 +75,13 @@
   flex-direction:column;
 }
 
-.text-button-wrapper > a {
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: bold;
-  color: #1974e8;
-}
+ .text-button-wrapper>a {
+   font-family: Roboto;
+   text-decoration: none;
+   font-size: 18px;
+   font-weight: bold;
+   color: #1974e8;
+ }
 
 button:disabled {
   opacity: 0.5;
