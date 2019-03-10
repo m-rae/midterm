@@ -58,7 +58,7 @@
   justify-content: space-between;
 }
 
-.sign-in-button-wrapper > button {
+.sign-in-button-wrapper >router-link> button {
   font-size: 18px;
   border-radius: 4px;
   padding: 10px 20px;

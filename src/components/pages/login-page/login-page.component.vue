@@ -22,7 +22,9 @@
             </router-link>
           </div>
           <div class="sign-in-button-wrapper">
+            <router-link to="/dashboard">
             <button v-bind:disabled="!isFormValidated" @click="signIn">Sign In</button>
+            </router-link>
           </div>
         </div>
       </el-card>

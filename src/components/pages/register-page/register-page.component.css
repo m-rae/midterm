@@ -58,7 +58,7 @@
    justify-content: space-between;
  }
 
- .next-button-wrapper>button {
+ .next-button-wrapper>router-link>button {
    font-size: 18px;
    width: 98px;
    border-radius: 4px;

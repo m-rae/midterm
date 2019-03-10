@@ -55,7 +55,9 @@
             </router-link>
           </div>
           <div class="next-button-wrapper">
-            <button v-bind:disabled="!isFormValidated" @click="register">Next</button>
+            <router-link to="/dashboard">
+            <button v-bind:disabled="!isFormValidated" @click="register()">Next</button>
+            </router-link>
           </div>
         </div>
       </el-card>
