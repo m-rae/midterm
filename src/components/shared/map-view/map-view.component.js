@@ -7,25 +7,39 @@ export default {
     },
     data() {
         return {
-            markers: []
+            markers: [],
+            center: null,
+            currentPlace: null,
+
         }
     },
     computed: {
-        google: gmapApi
+        google: gmapApi,
+        zoomValue() {
+            return this.currentPlace ? 18 : 14;
+        }
     },
     mounted() {
-
+        this.initPlaces();
     },
     methods: {
         initPlaces() {
-            this.addressList.map(address => {
-                const marker = {
-                    lat: address.lat,
-                    lng: address.lng
-                };
+            this.markers = this.addressList.map(address => this.buildMarker(address));
 
-                return { position: marker };
-            });
+            this.center = this.markers[0].position;
+        },
+        setLocation(address) {
+            this.center = this.buildMarker(address).position;
+            this.currentPlace = address;
+        },
+        buildMarker(address) {
+            const marker = {
+                lat: address.lat,
+                lng: address.lng
+            };
+
+            return { position: marker };
         }
+
     }
 }

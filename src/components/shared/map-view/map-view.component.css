@@ -2,3 +2,27 @@
     height: 100%;
     width: 100%;
 }
+
+.map-view-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.map-wrapper {
+    width: 100%;
+}
+
+.address-list-wrapper {
+    min-width: fit-content;
+    overflow-y: scroll;
+}
+
+.address-item {
+    padding: 8px 10px;
+}
+
+.address-item:hover, .current-place {
+    background:rebeccapurple;
+    color:white;
+    cursor:pointer;
+}
