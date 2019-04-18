@@ -58,7 +58,7 @@
   justify-content: space-between;
 }
 
-.sign-in-button-wrapper >router-link> button {
+.sign-in-button-wrapper > button {
   font-size: 18px;
   border-radius: 4px;
   padding: 10px 20px;
@@ -70,9 +70,9 @@
 
 .text-button-wrapper {
   display: flex;
-  justify-content:center;
-  align-content:center;
-  flex-direction:column;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
 }
 
  .text-button-wrapper>a {

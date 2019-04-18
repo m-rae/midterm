@@ -62,6 +62,7 @@ export default {
       }, true);
     },
     register() {
+      alert('clicked!!!');
       if (this.isFormValidated) {
         const newUser = {
           firstName: this.formData.firstName,
@@ -69,12 +70,14 @@ export default {
           email: this.formData.email,
           password: this.formData.password
         };
+
         this.$store.dispatch('REGISTER', newUser).then(
-          (user) => this.onLoginSuccessful(user),
-          (error) => this.onLoginFailed(error)
+          (user) => this.onRegisterSuccessful(user),
+          (error) => this.onRegisterFailed(error)
         );
       }
     },
+
     onRegisterSuccessful(user) {
       if (!user) {
         throw new Error('Something went wrong!');
@@ -82,9 +85,10 @@ export default {
 
       this.$router.push('dashboard');
     },
+
     onRegisterFailed(error) {
       /* eslint-disable */
       console.error(error);
-      }
     }
-  };
+  }
+};

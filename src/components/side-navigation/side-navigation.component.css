@@ -1,7 +1,65 @@
 #sideNavigation {
   height: 100%;
+  
 }
 
 .side-nav-menu {
   height: 100%;
+  
+}
+
+.el-menu-item {
+  width: 228px;
+  height: 84px;
+  display: flex;
+  align-items: center;
+}
+
+.el-menu-item:hover {
+  background-color: #a4d4f6;
+}
+
+.logo {
+  width: 228px;
+  height: 94px;
+  display: flex;
+  align-items: center;
+}
+
+.Snowcoop {
+  width: 114px;
+  height: 28px;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: #969696;
+  margin: 0 auto;
+}
+
+.Dashboard {
+  width: 118px;
+  height: 28px;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  margin: 0 auto;
+}
+
+.Address-List {
+  height: 28px;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: #000000;
+  margin: 0 auto;
+}
+
+.is-active span{
+  color: #1974e8
 }

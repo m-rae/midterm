@@ -8,40 +8,35 @@
         </div>
         <div class="form-body-wrapper">
           <!-- TODO: add form and form items inside for all control -->
-         <el-form ref="formData" :model="formData" @focusout.native="updateIsFormValidated">
+          <el-form ref="formData" :model="formData" @focusout.native="updateIsFormValidated">
             <el-row :gutter="20">
               <el-col :span="12">
-                  <el-form-item :rules="rules.firstName" prop="firstName">
-                  <el-input placeholder="First Name" v-model="formData.firstName">
-                  </el-input>
+                <el-form-item :rules="rules.firstName" prop="firstName">
+                  <el-input placeholder="First name" v-model="formData.firstName"></el-input>
                 </el-form-item>
               </el-col>
               <el-col :span="12">
                 <el-form-item :rules="rules.lastName" prop="lastName">
-                  <el-input placeholder="Last Name" v-model="formData.lastName">
-                  </el-input>
+                  <el-input placeholder="Last name" v-model="formData.lastName"></el-input>
                 </el-form-item>
               </el-col>
             </el-row>
             <el-row>
-                 <el-col>
+              <el-col :span="24">
                 <el-form-item :rules="rules.email" prop="email">
-                  <el-input placeholder="Email" v-model="formData.email">
-                  </el-input>
+                  <el-input placeholder="Email" v-model="formData.email"></el-input>
                 </el-form-item>
               </el-col>
             </el-row>
-                 <el-row :gutter="20">
-                 <el-col :span="12">
-                  <el-form-item :rules="rules.password" prop="password">
-                  <el-input type="password" placeholder="password" v-model="formData.password">
-                  </el-input>
+            <el-row :gutter="20">
+              <el-col :span="12">
+                <el-form-item :rules="rules.password" prop="password">
+                  <el-input type="password" placeholder="Password" v-model="formData.password"></el-input>
                 </el-form-item>
               </el-col>
               <el-col :span="12">
                 <el-form-item :rules="rules.passwordConfirm" prop="passwordConfirm">
-                  <el-input type="password" placeholder="Confirm" v-model="formData.passwordConfirm">
-                  </el-input>
+                  <el-input type="password" placeholder="Confirm Password" v-model="formData.passwordConfirm"></el-input>
                 </el-form-item>
               </el-col>
             </el-row>
@@ -51,13 +46,11 @@
           <!-- TODO: add buttons and wire up event handler and routing method -->
           <div class="text-button-wrapper">
             <router-link to="/login">
-            <a>Sign In instead</a>
+              <a>Sign in instead</a>
             </router-link>
           </div>
           <div class="next-button-wrapper">
-            <router-link to="/dashboard">
-            <button v-bind:disabled="!isFormValidated" @click="register()">Next</button>
-            </router-link>
+            <button v-bind:disabled="!isFormValidated" @click="register">Next</button>
           </div>
         </div>
       </el-card>
