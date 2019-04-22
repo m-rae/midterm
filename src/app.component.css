@@ -21,7 +21,7 @@ aside {
 
 .pac-container {
   border-radius: 4px;
-  z-index: 500000;
+  z-index: 1000000;
 }
 
 .pac-item {

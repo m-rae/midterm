@@ -1,5 +1,5 @@
 import mapView from '../../shared/map-view/map-view.component.vue'
-import formAddAddress from '../../pages/list-page/form-add-address/form-add-address.component.vue'
+import formAddAddress from './form-add-address/form-add-address.component.vue'
 
 export default {
   name: 'listPage',
