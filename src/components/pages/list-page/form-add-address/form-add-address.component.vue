@@ -2,13 +2,19 @@
  <div id ="formAddAddress">
    <el-dialog
   title="Add New Address"
+  @close="handleClose"
   :visible.sync="showForm"
   width="70%">
   <span>
     <div class="form-body-wrapper">
-      <el-form :model="formData">
+      <el-form :model="formData" ref="formData" @focusout.native="updateIsFormValidated">
         <el-form-item>
-          <gmap-autocomplete class="el-input__inner" placeholder="Enter Address" @place_changed="setPlace"></gmap-autocomplete>
+          <gmap-autocomplete 
+            class="el-input__inner" 
+            placeholder="Enter Address"
+            :value="addressInput" 
+            @place_changed="setPlace">
+          </gmap-autocomplete>
         </el-form-item>
         <div v-if="place">
           <el-form-item :rules="rules.street" prop="street">

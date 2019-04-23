@@ -20,7 +20,8 @@ export default {
         lat: [{ required: true }],
         lng: [{ required: true }]
       },
-      isFormValidated: false
+      isFormValidated: false,
+      addressInput: null
     };
   },
   methods: {
@@ -30,10 +31,7 @@ export default {
         const valid = field.isRequired && field.validateState === "success";
         const noError = !field.isRequired && field.validateState !== "error";
         return acc && (valid || noError);
-      }, true);
-    },
-    toggleForm(showForm) {
-        this.showForm = showForm;
+      }, true)
     },
     submit() {
       if (this.isFormValidated) {
@@ -52,6 +50,18 @@ export default {
           error => this.onnAddressFailed(error)
         );
       }
+    },
+    toggleForm(showForm) {
+      this.showForm = showForm;
+    },
+    handleClose() {
+      this.place = null;
+      this.formData.street = null;
+      this.formData.city = null;
+      this.formData.province = null;
+      this.formData.postalCode = null;
+      this.formData.lat = null;
+      this.formData.lng = null;
     },
     onAddressSuccessful(address) {
       if (address) {

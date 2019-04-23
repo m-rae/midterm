@@ -4,11 +4,11 @@
       <div class="list-header">
           <span class="list-title" v-if="addressList"> {{ `You have ${addressList.length} addresses to complete` }}</span>
           <div class="list-header-button-wrapper">
-            <button @click.prevent="showForm">Add</button>
+            <button @click.prevent="showForm()">Add</button>
           </div>
       </div>
-      <div class="list-view wrapper">
-        <el-card class="box-card">
+      <div class="list-view-wrapper">
+        <el-card class="map-view-card">
           <map-view 
             v-if="addressList"
             v-bind:showList="true"

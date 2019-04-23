@@ -71,6 +71,14 @@ const store = new Vuex.Store({
           await context.commit('SET_ADDRESS_LIST', payload);
           return payload;
       });
+    },
+    ADD_ADDRESS: (context, payload) => {
+      return AddressService.addAddress(payload).then(async payload => {
+        const addressList = context.state.addressList;
+        addressList.push(payload)
+        await context.commit("SET_ADDRESS_LIST", addressList)
+        return payload
+      })
     }
   }
 });

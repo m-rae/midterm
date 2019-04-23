@@ -16,7 +16,7 @@ export default {
   computed: {
     google: gmapApi,
     zoomValue() {
-      return this.currentPlace ? 18 : 14;
+      return this.currentPlace ? 18 : 7;
     }
   },
   mounted() {
